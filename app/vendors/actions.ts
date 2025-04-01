@@ -1,6 +1,6 @@
 "use server";
 
-import { z, ZodError } from "zod";
+import { ZodError } from "zod";
 import { revalidatePath } from "next/cache";
 import VendorModel from "@/app/lib/models/vendor";
 import { connectDB } from "@/app/lib/db";
@@ -67,7 +67,7 @@ export async function updateVendor(formData: FormData) {
 
 
 
-export async function deleteVendor(id: Number) {
+export async function deleteVendor(id: number) {
 
   if (!id) return;
 

@@ -29,7 +29,7 @@ export async function GET(req: Request) {
 
   } catch (error) {
     return NextResponse.json(
-      { error: "Failed to fetch vendors" },
+      { error: error || "Failed to fetch vendors" },
       { status: 500 }
     );
   }
